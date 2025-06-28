@@ -1,0 +1,123 @@
+﻿# --------------------
+# .NET 忽略项
+# --------------------
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vsp
+*.pdb
+*.cache
+*.dbmdl
+*.log
+*.vspscc
+*.vssscc
+_ReSharper*/
+*.DotSettings.user
+TestResults/
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nupkg
+*.snupkg
+*.psess
+*.pidb
+*.svclog
+*.VisualState.xml
+*.ide
+.vscode/
+.vs/
+
+# --------------------
+# Go 忽略项
+# --------------------
+# 编译结果
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# 依赖缓存
+vendor/
+Godeps/
+
+# 编辑器生成
+*.swp
+
+# IDE工具
+.idea/
+*.iml
+
+# 模块缓存（通常放在 $GOPATH/pkg 之外，不需忽略，但以防）
+pkg/
+
+# --------------------
+# Python 忽略项
+# --------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境
+env/
+venv/
+ENV/
+VENV/
+.venv/
+.ENV/
+.Python
+
+# pipenv/poetry
+Pipfile.lock
+poetry.lock
+
+# Jupyter notebook checkpoint
+.ipynb_checkpoints
+
+# pyright/mypy/pylint 等工具生成
+.pytype/
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytest_cache/
+
+# 编译文件
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# --------------------
+# 通用忽略项
+# --------------------
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.sw?
+*.orig
+
+# OS 和编辑器临时文件
+~$*
+*.tmp
+*.temp
+*~
+
+# JetBrains Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Git 忽略列表自身说明文件（如果误提交）
+.gitignore~
+

@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAsync1", "MyAsync1\MyAsync1.csproj", "{4FC73DEC-1403-448B-82D0-E26C79C03E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfilerTest", "ProfilerTest\ProfilerTest.csproj", "{F38C71D9-129F-438B-8FC3-0BE905651A14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{ECFB440D-F5E9-431D-89CE-4A856D464E56}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MySharedProject1", "MySharedProject1\MySharedProject1.shproj", "{FC6288F0-A2BD-403F-9C73-CDEBE240FDCF}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MySharedProject1\MySharedProject1.projitems*{fc6288f0-a2bd-403f-9c73-cdebe240fdcf}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FC73DEC-1403-448B-82D0-E26C79C03E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC73DEC-1403-448B-82D0-E26C79C03E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC73DEC-1403-448B-82D0-E26C79C03E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC73DEC-1403-448B-82D0-E26C79C03E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F38C71D9-129F-438B-8FC3-0BE905651A14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38C71D9-129F-438B-8FC3-0BE905651A14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F38C71D9-129F-438B-8FC3-0BE905651A14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F38C71D9-129F-438B-8FC3-0BE905651A14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECFB440D-F5E9-431D-89CE-4A856D464E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECFB440D-F5E9-431D-89CE-4A856D464E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECFB440D-F5E9-431D-89CE-4A856D464E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECFB440D-F5E9-431D-89CE-4A856D464E56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD709997-EF59-44B2-A86A-08547AA33E51}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal
