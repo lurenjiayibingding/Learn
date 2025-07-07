@@ -18,10 +18,9 @@ namespace SyncAndAsync
             }
             else
             {
-                while (true)
+                for (int i = 0; i < 100; i++)
                 {
-                    var input2 = Console.ReadLine();
-                    new PipClient("localhost", input2);
+                    new PipClient("localhost", i.ToString());
                 }
             }
 

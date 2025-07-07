@@ -1,10 +1,13 @@
 package main
 
 import (
-	"bufio"
-	"os"
+	// "bufio"
+	// "fmt"
+	// "os"
 
-	"example.com/base/Ch2/tempconv"
+	// packageinit "example.com/base/Ch2/packageInit"
+	// "example.com/base/Ch2/tempconv"
+	"example.com/base/Ch2/scoping"
 )
 
 func main() {
@@ -20,14 +23,19 @@ func main() {
 	// 	fmt.Printf("%s=%s,%s=%s\n", f, tempconv.FToC(f), c, tempconv.CToF(c))
 	// }
 
-	if len(os.Args) > 1 {
-		for _, input := range os.Args[1:] {
-			tempconv.InputDistanceConvert(input)
-		}
-	} else {
-		scanner := bufio.NewScanner(os.Stdin)
-		for scanner.Scan() {
-			tempconv.InputDistanceConvert(scanner.Text())
-		}
-	}
+	// if len(os.Args) > 1 {
+	// 	for _, input := range os.Args[1:] {
+	// 		tempconv.InputDistanceConvert(input)
+	// 	}
+	// } else {
+	// 	scanner := bufio.NewScanner(os.Stdin)
+	// 	for scanner.Scan() {
+	// 		tempconv.InputDistanceConvert(scanner.Text())
+	// 	}
+	// }
+
+	// fmt.Printf("Pc2=%v", packageinit.Pc2)
+
+	scoping.LowToUpper1()
+	scoping.LowToUpper2()
 }
