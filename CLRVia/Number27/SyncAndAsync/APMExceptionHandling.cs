@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.Net;
 
 namespace SyncAndAsync
 {
@@ -38,7 +31,8 @@ namespace SyncAndAsync
             }
             catch (WebException ex)
             {
-                Console.WriteLine($"Web请求发生异常{JsonSerializer.Serialize(ex)}");
+                //Console.WriteLine($"Web请求发生异常{JsonConvert.SerializeObject(ex)}");
+                Console.WriteLine($"Web请求发生异常{ex.Message}");
             }
             finally
             {
