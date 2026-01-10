@@ -22,7 +22,7 @@ namespace SyncAndAsync
                 //var pipeServer = new PipeServer();
                 //await pipeServer.ReceiveAndWriteAsync("Echo");
 
-                _ = pipe.ServiceListerAsync("Echo", PipeDirection.InOut, -1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous | PipeOptions.WriteThrough);
+                _ = pipe.ServiceListerAsync("Echo", PipeDirection.InOut, -1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous | PipeOptions.WriteThrough, pipe.DefaultServiceHandle);
 
                 Console.WriteLine("服务端命名管道已经启动");
                 Console.ReadLine();

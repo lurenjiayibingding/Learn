@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace SyncAndAsync
+namespace SyncAndAsync.CustomDefined
 {
     /// <summary>
     /// APM中的异常处理

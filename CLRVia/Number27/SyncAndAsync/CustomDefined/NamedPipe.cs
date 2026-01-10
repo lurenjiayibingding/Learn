@@ -36,6 +36,31 @@ namespace SyncAndAsync.CustomDefined
             }
         }
 
+
+        /// <summary>
+        /// 命名管道服务端开始异步的监听并处理命名管道客户端发送的数据
+        /// </summary>
+        /// <param name="pipeName"></param>
+        /// <param name="direction"></param>
+        /// <param name="maxNumberOfServerInstances"></param>
+        /// <param name="transmissionMode"></param>
+        /// <param name="options"></param>
+        /// <param name="func"></param>
+        /// <returns></returns>
+        public async Task ServiceListerAsync(string pipeName, PipeDirection direction, int maxNumberOfServerInstances, PipeTransmissionMode transmissionMode, PipeOptions options, Func<NamedPipeServerStream, Task> func)
+        {
+            while (true)
+            {
+                var pipeServer = new NamedPipeServerStream(pipeName, direction, maxNumberOfServerInstances, transmissionMode, options);
+                await pipeServer.WaitForConnectionAsync();
+
+                _ = Task.Run(async () =>
+                {
+                    await func(pipeServer);
+                });
+            }
+        }
+
         public async Task DefaultServiceHandle(NamedPipeServerStream pipeServer)
         {
             using (pipeServer)
@@ -71,10 +96,10 @@ namespace SyncAndAsync.CustomDefined
         }
 
         /// <summary>
-        /// 
+        /// 异步的从管道流中读取数据
         /// </summary>
-        /// <param name="pipe"></param>
-        /// <returns></returns>
+        /// <param name="pipe">需要读取数据的管道流</param>
+        /// <returns>读取出来的数据</returns>
         private async Task<string> ReadPipeStream(PipeStream pipe)
         {
             var prefixBytes = await ReadPipeStreamByLen(pipe, 4);
