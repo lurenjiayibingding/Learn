@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp1.CLass
 {
-    internal class StringCompare
+    public class DerivedClass : BaseClass
     {
-        public void Compare1()
+        public override void Method()
         {
-            return string.Equals("abc", "abc");
+            Console.WriteLine("DerivedClass");
         }
     }
 }

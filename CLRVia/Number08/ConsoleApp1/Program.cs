@@ -8,14 +8,17 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Int32 a = 0;
-        a.ToString();
+        //Int32 a = 0;
+        //a.ToString();
 
-        Console.WriteLine(typeof(Int32).Assembly.FullName);
+        //Console.WriteLine(typeof(Int32).Assembly.FullName);
 
-        MyBaseClass myBaseClass = new MyBaseClass(100, 100);
+        //MyBaseClass myBaseClass = new MyBaseClass(100, 100);
 
-        //var base2 = Object.MemberwiseClone(myBaseClass);
+        ////var base2 = Object.MemberwiseClone(myBaseClass);
+
+        BaseClass bc = new DerivedClass();
+        bc.Method();
 
         Console.WriteLine("Hello, World!");
     }

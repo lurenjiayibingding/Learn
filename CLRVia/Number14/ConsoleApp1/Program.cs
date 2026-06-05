@@ -1,12 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using ConsoleApp1;
+using StringLibrary;
+using System.Text;
 
-//Char a = '1';
-//var cateroty = char.GetUnicodeCategory(a);
-//Console.WriteLine(cateroty.ToString());
+var bytes = System.Text.Encoding.UTF8.GetBytes("abcdefg");
+System.Text.Encoding.UTF8.GetString(bytes);
 
-CharMethod.UseCharMethod();
-ConvertChar.ConvertMethod();
+Console.WriteLine(MyUTF8.Decode(bytes));
+
+UTF8Encoding u8 = new UTF8Encoding();
+u8.GetString(bytes);
 
 Console.WriteLine("over");
 Console.ReadKey();

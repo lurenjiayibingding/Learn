@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp1.CLass
 {
-    public class CharMethod
+    public class BaseClass
     {
-        public static void UseCharMethod()
+        public virtual void Method()
         {
+            Console.WriteLine("BaseClass");
         }
     }
 }
