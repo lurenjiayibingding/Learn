@@ -7,6 +7,7 @@
 //    Console.WriteLine(item);
 //}
 
+using CoreConsoleThread;
 using CoreConsoleThread.Definition;
 
 //try
@@ -22,10 +23,21 @@ using CoreConsoleThread.Definition;
 //    Console.WriteLine(ex.Message);
 //}
 
+
 try
 {
-    TaskExplore te = new TaskExplore();
-    te.Exception1();
+    await File.ReadAllBytesAsync("D:\\test.txt").ContinueWith((task) =>
+    {
+        Console.WriteLine(task.Result.Length);
+    });
+
+
+    //TaskExplore te = new TaskExplore();
+    //te.Exception1();
+
+
+    ExecutionContextPractice.ContextFlow();
+    ExecutionContextPractice.ContextFlow2();
 }
 catch (AggregateException ex)
 {
