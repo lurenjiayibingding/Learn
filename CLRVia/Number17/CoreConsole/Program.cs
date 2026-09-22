@@ -1,4 +1,5 @@
 ﻿using CoreConsole.Definition;
+using CoreConsole.Types;
 using Newtonsoft.Json;
 using System.Collections.Concurrent;
 using System.Text;
@@ -16,10 +17,17 @@ namespace CoreConsole
                 //InstanceDelegateDemo();
                 //ChainDelegeDemo1(new Program());
 
-                DelegateClass delegateClass = new DelegateClass();
-                //delegateClass.delegate1();
-                delegateClass.SimpleInvoke1();
-                delegateClass.SimpleInvoke2();
+                //DelegateClass delegateClass = new DelegateClass();
+                ////delegateClass.delegate1();
+                //delegateClass.SimpleInvoke1();
+                //delegateClass.SimpleInvoke2();
+
+                DelegateList dl = new DelegateList();
+                dl.CombineAndRemove();
+
+                dl.Run();
+
+
 
                 Console.WriteLine("Hello, World!");
                 Console.ReadKey();
