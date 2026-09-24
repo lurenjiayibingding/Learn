@@ -14,7 +14,6 @@ namespace CoreConsole.Types
     /// </summary>
     public class DeleteReflect
     {
-
         private delegate int AddDelete(int a, int b);
 
         private delegate string UpperDelegate(string input);
@@ -46,7 +45,11 @@ namespace CoreConsole.Types
 
                 delArgs[0] = a;
                 delArgs[1] = b;
-                d = Delegate.CreateDelegate(delType, this, nameof(AddMethod));
+                //d = Delegate.CreateDelegate(delType, this, nameof(AddMethod));
+
+                var methodInfo = typeof(DeleteReflect).GetMethod("AddMethod");
+                d = Delegate.CreateDelegate(delType, this, methodInfo);
+
             }
             else
             {

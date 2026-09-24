@@ -27,11 +27,10 @@ namespace CoreConsole
                 //dl.Run();
 
                 #region 委托和反射
-                DeleteReflect dr = new DeleteReflect();
-                //dr.InvokeReflectDelegate(new string[] { "CoreConsole.Types.DeleteReflect+AddDelete,CoreConsole", "100", "200" });
+                var dr = new DeleteReflect();
+                dr.InvokeReflectDelegate(new string[] { "CoreConsole.Types.DeleteReflect+AddDelete,CoreConsole", "100", "200" });
                 dr.InvokeReflectDelegate(new string[] { "CoreConsole.Types.DeleteReflect+UpperDelegate,CoreConsole", "hello" });
                 #endregion
-
 
                 Console.WriteLine("Hello, World!");
                 Console.ReadKey();
