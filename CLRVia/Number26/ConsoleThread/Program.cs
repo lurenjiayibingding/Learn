@@ -9,47 +9,18 @@
 
 using CoreConsoleThread;
 using CoreConsoleThread.Definition;
-
-//try
-//{
-//    Cancel.AutomaticCancelByCancelMethod();
-//}
-//catch (AggregateException ex)
-//{
-//    Console.WriteLine(ex.InnerExceptions[0].Message);
-//}
-//catch (Exception ex)
-//{
-//    Console.WriteLine(ex.Message);
-//}
-
+using CoreConsoleThread.Types;
 
 try
 {
-    await File.ReadAllBytesAsync("D:\\test.txt").ContinueWith((task) =>
-    {
-        Console.WriteLine(task.Result.Length);
-    });
+    var task = TeskException.ComputeLengthAsync2(null);
+    Console.WriteLine("Task 开始执行");
 
-
-    //TaskExplore te = new TaskExplore();
-    //te.Exception1();
-
-
-    ExecutionContextPractice.ContextFlow();
-    ExecutionContextPractice.ContextFlow2();
+    var result = await task;
 }
-catch (AggregateException ex)
+catch (ArgumentNullException ex)
 {
-
-}
-catch (OperationCanceledException ex)
-{
-
-}
-catch (Exception ex)
-{
-
+    Console.WriteLine($"捕获到异常: {ex.Message}");
 }
 
 Console.WriteLine("Hello, World!");

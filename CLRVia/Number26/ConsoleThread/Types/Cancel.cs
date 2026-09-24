@@ -24,12 +24,23 @@ namespace CoreConsoleThread.Definition
             });
             System.Threading.Thread.Sleep(1000);
 
+
+
             source.Token.Register(new Action(AfterCancelMethod), true);
             source.Token.Register(new Action(AfterCancelMethod2), true);
             source.Token.Register(new Action(AfterCancelMethod3), false);
             source.Token.Register(new Action(AfterCancelMethod4), false);
 
-            source.Cancel();
+            //source.Cancel();
+
+            Console.WriteLine(source.IsCancellationRequested);
+
+            if (source.TryReset())
+            {
+                Console.WriteLine(source.IsCancellationRequested);
+                source.Cancel();
+                Console.WriteLine(source.IsCancellationRequested);
+            }
         }
 
         /// <summary>
