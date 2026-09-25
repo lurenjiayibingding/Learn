@@ -7,21 +7,15 @@
 //    Console.WriteLine(item);
 //}
 
-using CoreConsoleThread;
-using CoreConsoleThread.Definition;
 using CoreConsoleThread.Types;
 
-try
-{
-    var task = TeskException.ComputeLengthAsync2(null);
-    Console.WriteLine("Task 开始执行");
 
-    var result = await task;
-}
-catch (ArgumentNullException ex)
-{
-    Console.WriteLine($"捕获到异常: {ex.Message}");
-}
+ThreadPoolPractice tp1 = new ThreadPoolPractice();
+tp1.PushQueUserWorkItem();
+
+//StartModel s = new StartModel();
+//s.Start();
+
 
 Console.WriteLine("Hello, World!");
 Console.ReadKey();
