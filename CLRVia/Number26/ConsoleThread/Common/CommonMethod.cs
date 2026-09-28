@@ -45,6 +45,7 @@ namespace CoreConsoleThread.Common
             var result = 0;
             for (int i = 0; i < length; i++)
             {
+                Console.WriteLine($"i={i.ToString()}, result={result.ToString()}");
                 result += i;
             }
 

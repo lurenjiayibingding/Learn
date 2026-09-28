@@ -10,11 +10,11 @@
 using CoreConsoleThread.Types;
 
 
-ThreadPoolPractice tp1 = new ThreadPoolPractice();
-tp1.PushQueUserWorkItem();
+//ThreadPoolPractice tp1 = new ThreadPoolPractice();
+//tp1.PushQueUserWorkItem();
 
-//StartModel s = new StartModel();
-//s.Start();
+StartModel s = new StartModel();
+s.StartWithCancellationToken();
 
 
 Console.WriteLine("Hello, World!");
