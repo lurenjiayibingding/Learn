@@ -7,14 +7,27 @@
 //    Console.WriteLine(item);
 //}
 
+using CoreConsoleThread.Definition;
 using CoreConsoleThread.Types;
 
 
 //ThreadPoolPractice tp1 = new ThreadPoolPractice();
 //tp1.PushQueUserWorkItem();
 
-StartModel s = new StartModel();
-s.StartWithCancellationToken();
+//StartModel s = new StartModel();
+//s.StartWithCancellationToken();
+
+//CreateOptions cp = new CreateOptions();
+//cp.CreateHierarchyTask();
+
+//TaskContinue tc = new TaskContinue();
+//tc.CreateContinue();
+
+//TaskCancel.CancelTask();
+
+var te = new TaskException();
+//await te.Start();
+te.TaskCancelState();
 
 
 Console.WriteLine("Hello, World!");

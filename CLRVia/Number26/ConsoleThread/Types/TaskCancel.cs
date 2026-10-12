@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoreConsoleThread.Common;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace CoreConsoleThread.Definition
     /// <summary>
     /// 协作式取消
     /// </summary>
-    public class Cancel
+    public class TaskCancel
     {
         /// <summary>
         /// 取消方法时的回调
@@ -283,5 +284,39 @@ namespace CoreConsoleThread.Definition
             linkedSource.Cancel();
 
         }
+
+
+        /// <summary>
+        /// 直接取消一个Task并不会抛出异常和修改状态
+        /// </summary>
+        /// <returns></returns>
+        public static async Task CancelTask()
+        {
+            var cts = new CancellationTokenSource();
+            cts.Cancel();
+
+            try
+            {
+                var task = Task.Run(() =>
+                {
+                    if (cts.Token.IsCancellationRequested)
+                    {
+                        Console.WriteLine("任务已被取消");
+                        return;
+                    }
+                    CommonMethod.SumWithoutResult(100);
+                });
+
+                await task;
+
+                Console.WriteLine(task.Status);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"任务执行异常：{ex.Message}");
+            }
+        }
+
     }
 }
