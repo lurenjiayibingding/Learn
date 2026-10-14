@@ -25,9 +25,12 @@ using CoreConsoleThread.Types;
 
 //TaskCancel.CancelTask();
 
-var te = new TaskException();
-//await te.Start();
-te.TaskCancelState();
+//var te = new TaskException();
+////await te.Start();
+//te.TaskCancelState();
+
+var output = new OutputContent();
+await output.OutPut(@"C:\Users\liujiguang\Desktop\面试.txt");
 
 
 Console.WriteLine("Hello, World!");
