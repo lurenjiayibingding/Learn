@@ -38,10 +38,6 @@ namespace CoreConsoleThread.Types
             return _buffer[position++];
         }
 
-        public async ValueTask aaa()
-        {
-        }
-
         /// <summary>
         /// 
         /// </summary>

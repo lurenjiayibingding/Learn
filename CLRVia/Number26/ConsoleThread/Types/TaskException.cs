@@ -53,6 +53,9 @@ namespace CoreConsoleThread.Types
             //Console.WriteLine(task.Status);
             try
             {
+                task.GetAwaiter().GetResult();
+
+
                 //await task;
                 task.Wait();
             }
