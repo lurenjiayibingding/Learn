@@ -29,8 +29,14 @@ using CoreConsoleThread.Types;
 ////await te.Start();
 //te.TaskCancelState();
 
-var output = new OutputContent();
-await output.OutPut(@"C:\Users\liujiguang\Desktop\面试.txt");
+//var output = new OutputContent();
+//await output.OutPut(@"C:\Users\liujiguang\Desktop\面试.txt");
+
+//PLINQ.QueryParallel();
+
+//TimerExplore.Repect();
+//TimerExplore.WaitComplete();
+await TimerExplore.RepectWithNotTimer();
 
 
 Console.WriteLine("Hello, World!");
